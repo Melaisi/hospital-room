@@ -6,6 +6,8 @@ public class Item : MonoBehaviour
 {
     public GameObject endLocation;
 
+    [SerializeField]
+    bool itemInPlace = false; // a flag to monitor if an item in the correct place or not. 
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,11 +15,12 @@ public class Item : MonoBehaviour
         {
             if(other.gameObject == endLocation)
             {
-                Debug.Log("Correct location enter");
+               itemInPlace = true;
+               Debug.Log("Correct location enter");
             }
             else
             {
-                Debug.Log("Wrong location enter");
+               // Debug.Log("Wrong location enter");
             }
         }
     }
@@ -29,11 +32,13 @@ public class Item : MonoBehaviour
         {
             if (other.gameObject == endLocation)
             {
-                Debug.Log("Correct location exit");
+                itemInPlace = false;
+               // Debug.Log("Correct location exit");
             }
             else
             {
-                Debug.Log("Wrong location exit");
+
+                //Debug.Log("Wrong location exit");
             }
         }
     }
