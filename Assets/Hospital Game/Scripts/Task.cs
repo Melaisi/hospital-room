@@ -6,6 +6,7 @@ public class Task : MonoBehaviour
 {
     public List<GameObject> items = new List<GameObject>();
     public List<Transform> startingLocation = new List<Transform>();
+    public List<Transform> endLocation = new List<Transform>();
 
     private void Start()
     {
@@ -22,6 +23,9 @@ public class Task : MonoBehaviour
         for (int i=0; i<items.Count; i++)
         {
             Instantiate(items[i], startingLocation[i].position,items[i].transform.rotation);
+            //assign end location 
+            items[i].GetComponent<Item>().endLocation = endLocation[i].gameObject;
+
         }
        
     }
