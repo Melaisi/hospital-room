@@ -339,38 +339,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 833933995883440417, guid: eb16cd9dd0dcc174a8f5afd4c73a1919, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.6958368
-      objectReference: {fileID: 0}
-    - target: {fileID: 833933995883440417, guid: eb16cd9dd0dcc174a8f5afd4c73a1919, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 833933995883440417, guid: eb16cd9dd0dcc174a8f5afd4c73a1919, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.71819997
-      objectReference: {fileID: 0}
-    - target: {fileID: 833933995883440417, guid: eb16cd9dd0dcc174a8f5afd4c73a1919, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -91.812
-      objectReference: {fileID: 0}
-    - target: {fileID: 833933995883440423, guid: eb16cd9dd0dcc174a8f5afd4c73a1919, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.21219656
-      objectReference: {fileID: 0}
-    - target: {fileID: 833933995883440423, guid: eb16cd9dd0dcc174a8f5afd4c73a1919, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 833933995883440423, guid: eb16cd9dd0dcc174a8f5afd4c73a1919, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.977227
-      objectReference: {fileID: 0}
-    - target: {fileID: 833933995883440423, guid: eb16cd9dd0dcc174a8f5afd4c73a1919, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 155.498
-      objectReference: {fileID: 0}
     - target: {fileID: 3110142131065515840, guid: eb16cd9dd0dcc174a8f5afd4c73a1919, type: 3}
       propertyPath: m_Name
       value: Recovery Room
