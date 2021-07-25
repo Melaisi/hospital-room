@@ -17,14 +17,16 @@ public class Task : MonoBehaviour
     {
         // instantiate items randomly
         // shuffle items
-        items.Shuffle();
+        //items.Shuffle();
+        // shuffle starting position instead 
+        startingLocation.Shuffle();
         // instantiate items to starting location  
         // todo: make sure avaliable starting locations 
         for (int i=0; i<items.Count; i++)
         {
-            Instantiate(items[i], startingLocation[i].position,items[i].transform.rotation);
+            var item = Instantiate(items[i], startingLocation[i].position,items[i].transform.rotation);
             //assign end location 
-            items[i].GetComponent<Item>().endLocation = endLocation[i].gameObject;
+            item.GetComponent<Item>().endLocation = endLocation[i].gameObject;
 
         }
        
