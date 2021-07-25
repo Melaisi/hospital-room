@@ -17,8 +17,12 @@ public class Task : MonoBehaviour
         // instantiate items randomly
         // shuffle items
         items.Shuffle();
-        // test shuffle 
-        Debug.Log(items.ToString());
+        // instantiate items to starting location  
+        // todo: make sure avaliable starting locations 
+        for (int i=0; i<items.Count; i++)
+        {
+            Instantiate(items[i], startingLocation[i].position,items[i].transform.rotation);
+        }
        
     }
 
