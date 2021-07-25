@@ -16,22 +16,11 @@ public class Task : MonoBehaviour
     {
         // instantiate items randomly
         // shuffle items
-        Shuffle<GameObject>(items);
+        items.Shuffle();
         // test shuffle 
         Debug.Log(items.ToString());
        
     }
 
     
-    private void Shuffle<T> (IList<T> list)
-    {
-        
-        for (int i = list.Count-1; i > 0;  i--)
-        {
-            int random = Random.Range(0, i);
-            T val = list[i];
-            list[i] = list[random];
-            list[random] = val;
-        }
-    }
 }
