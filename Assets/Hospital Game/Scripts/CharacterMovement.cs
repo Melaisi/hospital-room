@@ -44,6 +44,7 @@ public class CharacterMovement : MonoBehaviour
 
     void Start()
     {
+        MainCamera = Camera.main;
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
 
@@ -131,14 +132,14 @@ public class CharacterMovement : MonoBehaviour
             transform.localEulerAngles = currentAngles;
 
             // Camera look up/down
-            /*
+            
             var turnCam = -Input.GetAxis("Mouse Y");
             turnCam = turnCam * MouseSensitivity;
             m_VerticalAngle = Mathf.Clamp(turnCam + m_VerticalAngle, -89.0f, 89.0f);
             currentAngles = CameraPosition.transform.localEulerAngles;
             currentAngles.x = m_VerticalAngle;
             CameraPosition.transform.localEulerAngles = currentAngles;
-            */
+            
             Speed = move.magnitude / (PlayerSpeed * Time.deltaTime);
         }
 
