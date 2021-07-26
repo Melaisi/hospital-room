@@ -6,8 +6,10 @@ public class Item : MonoBehaviour
 {
     public GameObject endLocation;
 
-    [SerializeField]
-    bool itemInPlace = false; // a flag to monitor if an item in the correct place or not. 
+     
+    
+
+    public bool itemInPlace = false; // a flag to monitor if an item in the correct place or not. 
 
     private void OnTriggerEnter(Collider other)
     {

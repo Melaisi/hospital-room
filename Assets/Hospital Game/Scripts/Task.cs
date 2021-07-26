@@ -8,6 +8,8 @@ public class Task : MonoBehaviour
     public List<Transform> startingLocation = new List<Transform>();
     public List<Transform> endLocation = new List<Transform>();
 
+    
+
     private void Start()
     {
         initializeItems();
@@ -32,5 +34,22 @@ public class Task : MonoBehaviour
        
     }
 
+
+    /// <summary>
+    /// check if item are in correct order and update score 
+    /// </summary>
+    private void validate()
+    {
+       int score = 0;
+       foreach(GameObject item in items)
+        {
+            if (item.GetComponent<Item>().itemInPlace)
+            {
+                score++;
+            }
+        }
+        Debug.Log("Score:" + score);
+
+    }
     
 }

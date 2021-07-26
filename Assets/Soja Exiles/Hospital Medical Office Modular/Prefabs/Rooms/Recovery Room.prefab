@@ -2915,9 +2915,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8998668581126451650}
     m_Modifications:
+    - target: {fileID: 8502344132093723811, guid: 5b38206486edd9242b63acf6db475bba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8502344132093723907, guid: 5b38206486edd9242b63acf6db475bba, type: 3}
       propertyPath: m_Name
       value: FileCabinate_03_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502344132093723907, guid: 5b38206486edd9242b63acf6db475bba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8502344132093892777, guid: 5b38206486edd9242b63acf6db475bba, type: 3}
       propertyPath: m_LocalRotation.w
