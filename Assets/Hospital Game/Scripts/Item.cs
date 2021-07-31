@@ -5,9 +5,7 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public GameObject endLocation;
-
-     
-    
+    public Task task; 
 
     public bool itemInPlace = false; // a flag to monitor if an item in the correct place or not. 
 
@@ -20,10 +18,10 @@ public class Item : MonoBehaviour
                itemInPlace = true;
                Debug.Log("Correct location enter");
             }
-            else
-            {
-               // Debug.Log("Wrong location enter");
-            }
+
+            // increase task itemsInEndLocation
+            task.increaseItemsInEndLocation();
+
         }
     }
 
@@ -37,11 +35,9 @@ public class Item : MonoBehaviour
                 itemInPlace = false;
                // Debug.Log("Correct location exit");
             }
-            else
-            {
-
-                //Debug.Log("Wrong location exit");
-            }
+            // decrease task itemsInEndLocation
+            task.decreaseItemsInEndLocation();
         }
     }
+
 }
