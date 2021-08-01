@@ -42,7 +42,11 @@ public class GameController : MonoBehaviour
     {
         onGameStateChange += (State from, State to) =>
         {
-            Debug.Log($"Game state change from {from.ToString()} to {to.ToString()}");
+            if(from == State.PreGame && to == State.Playing)
+            {
+                // load main scene 
+                SceneManager.LoadScene("Main");
+            }
         };
     }
 
