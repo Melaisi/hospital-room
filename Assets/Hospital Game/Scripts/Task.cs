@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class Task : MonoBehaviour
 {
+    public Level level;
+
     public List<GameObject> itemsPrefab = new List<GameObject>();
     public List<GameObject> items = new List<GameObject>();
     public List<Transform> startingLocation = new List<Transform>();
     public List<Transform> endLocation = new List<Transform>();
 
     int itemsInEndLocation = 0;
+    public int score = 0;
+    
+    // to be checked by level 
+    public bool isTaskDone = false; 
+
 
     private void Start()
     {
@@ -38,23 +45,25 @@ public class Task : MonoBehaviour
        
     }
 
-
+    
     /// <summary>
     /// check if item are in correct order and update score 
     /// </summary>
     private void validate()
     {
-       int score = 0;
+      
        foreach(GameObject item in items)
         {
+            score = 0; 
             if (item.GetComponent<Item>().itemInPlace)
             {
 
                 score++;
             }
         }
-        Debug.Log("Score:" + score);
-
+        isTaskDone = true;
+        // let level know that this task is done 
+        level.increaseNoOfCompleatedTasks();
     }
     
     // to be called be called by ItemMovment everytime an item inter or exist [should be static somewhere for easy access] 
@@ -67,6 +76,10 @@ public class Task : MonoBehaviour
         {
             validate();
         }
+        else
+        {
+            isTaskDone = false; // just making sure that the task is not done until all items are on end locations 
+        }
     }
 
     public void decreaseItemsInEndLocation()
@@ -74,6 +87,10 @@ public class Task : MonoBehaviour
         if(itemsInEndLocation > 0)
         {
             itemsInEndLocation--; 
+        }
+        if (items.Count != itemsInEndLocation)
+        {
+            isTaskDone = false; // just making sure that the task is not done until all items are on end locations 
         }
     }
 }

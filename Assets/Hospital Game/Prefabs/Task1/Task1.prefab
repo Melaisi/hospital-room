@@ -941,6 +941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec6f4bc1b3e741545888898be168e9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: {fileID: 0}
   itemsPrefab:
   - {fileID: 8479124999703741822, guid: 25622fffa18992740b190f500e3feac4, type: 3}
   - {fileID: 4028801885976927781, guid: 5a7b3cd74ef67b8498696d72364dd843, type: 3}
@@ -957,3 +958,5 @@ MonoBehaviour:
   - {fileID: 1761917973}
   - {fileID: 322740855}
   - {fileID: 1852846924}
+  score: 0
+  isTaskDone: 0
