@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class UIMainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Button startBtn;
 
-    // Update is called once per frame
-    void Update()
+
+    private void Start()
     {
-        
+        startBtn.onClick.AddListener (() => { GameController.instance.StartGame(); });
     }
 }
