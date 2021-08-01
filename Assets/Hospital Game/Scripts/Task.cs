@@ -51,10 +51,10 @@ public class Task : MonoBehaviour
     /// </summary>
     private void validate()
     {
-      
-       foreach(GameObject item in items)
+        score = 0;
+        foreach (GameObject item in items)
         {
-            score = 0; 
+            
             if (item.GetComponent<Item>().itemInPlace)
             {
 

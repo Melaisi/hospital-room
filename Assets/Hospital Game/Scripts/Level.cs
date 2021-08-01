@@ -19,12 +19,14 @@ public class Level : MonoBehaviour
 
     private void checkTasksCompilation()
     {
-        noCompletedTasks = 0;   
+        noCompletedTasks = 0;
+        score = 0; // update score from each task
         foreach(Task task in tasks)
         {
             if (task.isTaskDone)
             {
                 noCompletedTasks++;
+                score += task.score;
             }
         }
         if(noCompletedTasks == tasks.Count)
