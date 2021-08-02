@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public static GameController instance; 
-    public enum State { MainMenu, PreGame ,Playing, Pause, End, Quit}
+    public enum State { MainMenu, PreGame ,Playing, Objective, Pause, End, Quit}
 
     [SerializeField]
     private State currentGameState;
@@ -83,6 +83,11 @@ public class GameController : MonoBehaviour
     public void PauseGame()
     {
         UpdateState(State.Pause);
+    }
+
+    public void ShowObjective()
+    {
+        UpdateState(State.Objective);
     }
 
     public void EndGame()
