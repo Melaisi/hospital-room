@@ -23,7 +23,7 @@ public class UIController : MonoBehaviour
 
     private void onGamsStateChange(GameController.State from, GameController.State to)
     {
-        if(from == GameController.State.MainMenu && to == GameController.State.PreGame)
+        if(from == GameController.State.MainMenu && to == GameController.State.PreGame || to == GameController.State.Objective)
         {
             displayCanvas(levelObjective);
             return;
