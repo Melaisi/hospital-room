@@ -20,7 +20,10 @@ public class GameController : MonoBehaviour
 
     public UnityAction<State, State> onGameStateChange;
 
-    
+    // score
+    // todo: need to make this scalable 
+    private int taskScore;
+    private int levelScore; 
 
     // singlton 
     private void Awake()
@@ -74,6 +77,7 @@ public class GameController : MonoBehaviour
     {
         UpdateState(State.PreGame);
     }
+    
     public void RestartGame()
     {
         UpdateState(State.PreGame);
@@ -99,5 +103,21 @@ public class GameController : MonoBehaviour
     {
         UpdateState(State.Quit);
     }
-
+    
+    public void setTaskScore(int score)
+    {
+        taskScore = score;
+    }
+    public int getTaskScore()
+    {
+        return taskScore;
+    }
+    public void setLevelScore(int score)
+    {
+        levelScore = score;
+    }
+    public int getLevelScore()
+    {
+        return levelScore;
+    }
 }
