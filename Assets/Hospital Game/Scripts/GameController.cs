@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public static GameController instance; 
-    public enum State { PreGame ,Playing, Pause, End, Quit}
+    public enum State { MainMenu, PreGame ,Playing, Pause, End, Quit}
 
     [SerializeField]
     private State currentGameState;
@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour
         else
         {
             instance = this;
-            currentGameState = State.PreGame;
+            currentGameState = State.MainMenu;
             DontDestroyOnLoad(this);
         }
     }
@@ -42,10 +42,15 @@ public class GameController : MonoBehaviour
     {
         onGameStateChange += (State from, State to) =>
         {
-            if(from == State.PreGame && to == State.Playing)
+            if(from == State.MainMenu && to == State.PreGame)
             {
                 // load main scene 
                 SceneManager.LoadScene("Main");
+            }
+            if(to == State.Quit)
+            {
+                // load main menu
+                SceneManager.LoadScene("MainMenu");
             }
         };
     }
@@ -59,9 +64,15 @@ public class GameController : MonoBehaviour
         onGameStateChange(previousGameState, currentGameState);
     }
 
+    public void StartPlaying()
+    {
+
+        UpdateState(State.Playing);
+    }
+
     public void StartGame()
     {
-        UpdateState(State.Playing);
+        UpdateState(State.PreGame);
     }
     public void RestartGame()
     {
