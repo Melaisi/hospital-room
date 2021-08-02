@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Unity Example/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
+    path: Assets/Hospital Game/Scenes/MainMenu.unity
+    guid: 715dfa20f54829241ad7899891ce05b5
+  - enabled: 1
     path: Assets/Hospital Game/Scenes/Main.unity
     guid: 0f80c854f166bfc49b30d9510701accc
   m_configObjects:
