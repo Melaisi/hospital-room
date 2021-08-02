@@ -32,6 +32,8 @@ public class Level : MonoBehaviour
         if(noCompletedTasks == tasks.Count)
         {
             isLevelCompleted = true;
+            GameController.instance.setTaskScore(score);
+            GameController.instance.setLevelScore(score);
             GameController.instance.EndGame();
         }
         else
