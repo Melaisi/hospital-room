@@ -30,7 +30,7 @@ public class UIController : MonoBehaviour
             displayCanvas(levelObjective);
             return;
         }
-        if(to == GameController.State.Playing)
+        if(to == GameController.State.Playing || to == GameController.State.Resume)
         {
             displayCanvas(hud);
             return;
@@ -40,6 +40,7 @@ public class UIController : MonoBehaviour
             displayCanvas(pauseMenu);
             return;
         }
+        
         if(to == GameController.State.End)
         {
             displayCanvas(levelComplete);
@@ -58,6 +59,7 @@ public class UIController : MonoBehaviour
         levelObjective.gameObject.SetActive(false);
         hud.gameObject.SetActive(false);
         levelComplete.gameObject.SetActive(false);
+        pauseMenu.gameObject.SetActive(false);
     }
 
     public void showObjective()
